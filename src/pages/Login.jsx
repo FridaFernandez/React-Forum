@@ -1,8 +1,24 @@
 import { Box, FormControl, FormLabel, Input, Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 
 function Login() {
+
+  const [userName, setUserName] = useState("")
+
+  function updateUserName(e){
+   const currentValue = e.currentTarget.value
+   setUserName(currentValue)
+  }
+
+  const[userEmail, setUserEmail] = useState("")
+
+  function updateUserEmail(e){
+    const currentValueEmail = e.currentTarget.value
+    setUserEmail(currentValueEmail)
+  }
+  
+  
   return (
     <Box>
       <Navbar></Navbar>
@@ -35,6 +51,8 @@ function Login() {
       <Box
       pb={'30px'}>
         <Input
+          value={userName}
+          onChange={updateUserName}
           placeholder="Enter your Username"
           type="user"
           boxSizing={"border-box"}
@@ -54,6 +72,8 @@ function Login() {
           pb={'30px'}
       >
         <Input
+         value={userEmail}
+          onChange={updateUserEmail}
           placeholder="Enter your Email"
           type="email"
           boxSizing={"border-box"}
@@ -68,6 +88,7 @@ function Login() {
       </Box>
 
         <Button
+          onClick={frida}
           backgroundColor={"rgb(255, 102, 0)"}
           w={"100%"}
           border={"1px solid rgb(255, 102, 0)"}
