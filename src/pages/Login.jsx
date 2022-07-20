@@ -63,6 +63,8 @@ function Login() {
           color={"rgb(52, 73, 94)"}
           width={"95%"}
           m={"8px"}
+          _focus={{borderColor:"#ff6600", outline:"#ff6600", boxShadow:"none"}}
+          _active={{borderColor:"#ff6600", outline:"#ff6600", boxShadow:"none"}}
         />
       </Box>
       <Box
@@ -84,11 +86,13 @@ function Login() {
           color={"rgb(52, 73, 94)"}
           width={"95%"}
           m={"8px"}
+          _focus={{borderColor:"#ff6600", outline:"#ff6600", boxShadow:"none"}}
+          _active={{borderColor:"#ff6600", outline:"#ff6600", boxShadow:"none"}}
         />
       </Box>
 
         <Button
-          onClick={frida}
+          // onClick={frida}
           backgroundColor={"rgb(255, 102, 0)"}
           w={"100%"}
           border={"1px solid rgb(255, 102, 0)"}
@@ -104,6 +108,7 @@ function Login() {
             backgroundColor: 'white',
             color: 'rgb(255, 102, 0)'
           }}
+          _active={{backgroundColor:"white"}}
         >
           Enter
         </Button>
