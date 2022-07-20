@@ -6,7 +6,18 @@ function ModalPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <Box position={"fixed"} bottom={"25px"} right={"25px"}>
+        <Button 
+          onClick={onOpen}
+          backgroundColor={"#ff6600"} 
+          borderRadius={"30px"} color={"white"} 
+          fontSize={"30px"} 
+          width={"55px"} 
+          height={"55px"}
+          _active={{backgroundColor:"#ff6600"}}
+          _hover={{backgroundColor:"#ff6600"}}
+        >+</Button>
+      </Box>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent margin={"150px"} borderRadius={"none"}>
